@@ -58,12 +58,12 @@ def iwv_itcz_edges_enfo(
     plot2 = _draw_icwv_enfo_mean_contour(forecast_enfo, ax)
     plot3 = _draw_icwv_oper_contour(forecast_oper, ax)
     plot4 = _draw_icwv_ERA5_contour(climatology, ax)
-    plot_sattrack(ax, briefing_time, lead_hours, sattracks_fc_time,
-                  which_orbit="descending")
-    for flight_id in FLIGHTS:
-        flight = get_python_flightdata(flight_id)
-        plot_python_flighttrack(flight, briefing_time, lead_hours, ax,
-                                color="C1", show_waypoints=False)
+    # plot_sattrack(ax, briefing_time, lead_hours, sattracks_fc_time,
+    #               which_orbit="descending")
+    # for flight_id in FLIGHTS:
+    #     flight = get_python_flightdata(flight_id)
+    #     plot_python_flighttrack(flight, briefing_time, lead_hours, ax,
+    #                             color="C1", show_waypoints=False)
     plot_meteor_latest_position_in_ifs_forecast(
         briefing_time, lead_hours, ax, meteor=meteor_track)
     
@@ -157,7 +157,7 @@ def _get_rolling_daily_climatology(
     valid_time = get_valid_time(briefing_time, lead_hours)
     valid_time_doy = valid_time.day_of_year
     climatology = _load_rolling_daily_climatology(var)
-    return climatology.sel(dayofyear=valid_time_doy)
+    return climatology.sel(dayofyear=valid_time_doy,method='nearest')
 
 def _load_rolling_daily_climatology(var: str = "tcwv"):
     climatology_path = get_climatology_path()

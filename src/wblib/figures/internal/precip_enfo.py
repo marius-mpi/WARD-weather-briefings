@@ -62,12 +62,12 @@ def precip_enfo(
     fig.colorbar(
         plot1, label=f"(Probability of 3h-mean precip.\nrate > {CONTOUR_THRESHOLD}mm/day) / %",
         shrink=0.8)
-    plot_sattrack(ax, briefing_time, lead_hours, sattracks_fc_time,
-                  which_orbit="descending")
-    for flight_id in FLIGHTS:
-        flight = get_python_flightdata(flight_id)
-        plot_python_flighttrack(flight, briefing_time, lead_hours, ax,
-                                color="C1", show_waypoints=False)
+    # plot_sattrack(ax, briefing_time, lead_hours, sattracks_fc_time,
+    #               which_orbit="descending")
+    # for flight_id in FLIGHTS:
+    #     flight = get_python_flightdata(flight_id)
+    #     plot_python_flighttrack(flight, briefing_time, lead_hours, ax,
+    #                             color="C1", show_waypoints=False)
     plot_meteor_latest_position_in_ifs_forecast(
         briefing_time, lead_hours, ax, meteor=meteor_track)
     

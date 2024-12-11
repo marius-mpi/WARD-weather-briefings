@@ -56,12 +56,12 @@ def sfc_winds(
     _wind_direction_plot(u10m, v10m, ax)
     _windspeed_contour(windspeed_10m, ax)
     _draw_confluence_contour(v10m, ax)
-    plot_sattrack(ax, briefing_time, lead_hours, sattracks_fc_time,
-                  which_orbit="descending")
-    for flight_id in FLIGHTS:
-        flight = get_python_flightdata(flight_id)
-        plot_python_flighttrack(flight, briefing_time, lead_hours, ax,
-                                color="C1", show_waypoints=False)
+    # plot_sattrack(ax, briefing_time, lead_hours, sattracks_fc_time,
+    #               which_orbit="descending")
+    # for flight_id in FLIGHTS:
+    #     flight = get_python_flightdata(flight_id)
+    #     plot_python_flighttrack(flight, briefing_time, lead_hours, ax,
+    #                             color="C1", show_waypoints=False)
     plot_meteor_latest_position_in_ifs_forecast(
         briefing_time, lead_hours, ax, meteor=meteor_track)
     matplotlib.rc_file_defaults()

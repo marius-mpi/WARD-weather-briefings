@@ -32,7 +32,7 @@ def get_hera5_climatology():
         hera5["time"] < np.datetime64(CLIMATOLOGY_CUT_OUT_TIME), drop=True
     )
     hera5 = hera5.rolling(time=7, center=True).mean()
-    hera5 = hera5.sel(time=hera5["time"].dt.month.isin([9, 10]))
+    hera5 = hera5.sel(time=hera5["time"].dt.month.isin([1,2,9, 10,12]))
     hera5 = hera5.groupby("time.dayofyear").mean()
     return hera5
 

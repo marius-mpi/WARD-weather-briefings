@@ -75,12 +75,12 @@ def precip(
                                 sattracks_fc_time, "precip", ax)
     _draw_tcwv_contours_for_previous_forecasts(tcwv_forecasts, ax)
     _draw_current_forecast(precip, fig, ax)
-    plot_sattrack(ax, briefing_time, lead_hours, sattracks_fc_time,
-                  which_orbit="descending")
-    for flight_id in FLIGHTS:
-        flight = get_python_flightdata(flight_id)
-        plot_python_flighttrack(flight, briefing_time, lead_hours, ax,
-                                color="C1", show_waypoints=False)
+    # plot_sattrack(ax, briefing_time, lead_hours, sattracks_fc_time,
+    #               which_orbit="descending")
+    # for flight_id in FLIGHTS:
+    #     flight = get_python_flightdata(flight_id)
+    #     plot_python_flighttrack(flight, briefing_time, lead_hours, ax,
+    #                             color="C1", show_waypoints=False)
     plot_meteor_latest_position_in_ifs_forecast(
         briefing_time, lead_hours, ax, meteor=meteor_track)
     matplotlib.rc_file_defaults()

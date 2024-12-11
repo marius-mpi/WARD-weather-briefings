@@ -1,12 +1,13 @@
-location: Sal
+location: Barbados
 date: '20240828'
-sattracks_fc_date: '20240826'
+sattracks_fc_date: '20240828'
 valid_dates:
-  012h: 2024-08-28 12:00 UTC
-  036h: 2024-08-29 12:00 UTC
-  060h: 2024-08-30 12:00 UTC
+  015h: 2024-08-28 15:00 UTC
+  039h: 2024-08-29 15:00 UTC
+  063h: 2024-08-30 15:00 UTC
   084h: 2024-08-31 12:00 UTC
   108h: 2024-09-01 12:00 UTC
+  132h: 2024-09-02 12:00 UTC
 plots:
   external_inst:
     nhc_surface_analysis_atlantic: fig/external_inst/nhc_surface_analysis_atlantic.png
@@ -17,34 +18,60 @@ plots:
     nhc_hovmoller: fig/external_inst/nhc_hovmoller.png
     ifs_meteogram: fig/external_inst/ifs_meteogram.png
   external_lead:
-    dust:
-      012h: fig/external_lead/IFS_20240828+012h_dust.png
-      036h: fig/external_lead/IFS_20240828+036h_dust.png
-      060h: fig/external_lead/IFS_20240828+060h_dust.png
-      084h: fig/external_lead/IFS_20240828+084h_dust.png
-      108h: fig/external_lead/IFS_20240828+108h_dust.png
+    total_aerosol:
+      015h: fig/external_lead/IFS_20240828+015h_total_aerosol.png
+      039h: fig/external_lead/IFS_20240828+039h_total_aerosol.png
+      063h: fig/external_lead/IFS_20240828+063h_total_aerosol.png
+      084h: fig/external_lead/IFS_20240828+084h_total_aerosol.png
+      108h: fig/external_lead/IFS_20240828+108h_total_aerosol.png
+      132h: fig/external_lead/IFS_20240828+132h_total_aerosol.png
   internal:
     iwv_itcz_edges:
-      012h: fig/internal/IFS_20240828+012h_iwv_itcz_edges.png
-      036h: fig/internal/IFS_20240828+036h_iwv_itcz_edges.png
-      060h: fig/internal/IFS_20240828+060h_iwv_itcz_edges.png
+      015h: fig/internal/IFS_20240828+015h_iwv_itcz_edges.png
+      039h: fig/internal/IFS_20240828+039h_iwv_itcz_edges.png
+      063h: fig/internal/IFS_20240828+063h_iwv_itcz_edges.png
       084h: fig/internal/IFS_20240828+084h_iwv_itcz_edges.png
       108h: fig/internal/IFS_20240828+108h_iwv_itcz_edges.png
+      132h: fig/internal/IFS_20240828+132h_iwv_itcz_edges.png
     sfc_winds:
-      012h: fig/internal/IFS_20240828+012h_sfc_winds.png
-      036h: fig/internal/IFS_20240828+036h_sfc_winds.png
-      060h: fig/internal/IFS_20240828+060h_sfc_winds.png
+      015h: fig/internal/IFS_20240828+015h_sfc_winds.png
+      039h: fig/internal/IFS_20240828+039h_sfc_winds.png
+      063h: fig/internal/IFS_20240828+063h_sfc_winds.png
       084h: fig/internal/IFS_20240828+084h_sfc_winds.png
       108h: fig/internal/IFS_20240828+108h_sfc_winds.png
+      132h: fig/internal/IFS_20240828+132h_sfc_winds.png
     precip:
-      012h: fig/internal/IFS_20240828+012h_precip.png
-      036h: fig/internal/IFS_20240828+036h_precip.png
-      060h: fig/internal/IFS_20240828+060h_precip.png
+      015h: fig/internal/IFS_20240828+015h_precip.png
+      039h: fig/internal/IFS_20240828+039h_precip.png
+      063h: fig/internal/IFS_20240828+063h_precip.png
       084h: fig/internal/IFS_20240828+084h_precip.png
       108h: fig/internal/IFS_20240828+108h_precip.png
+      132h: fig/internal/IFS_20240828+132h_precip.png
     cloud_top_height:
-      012h: fig/internal/IFS_20240828+012h_cloud_top_height.png
-      036h: fig/internal/IFS_20240828+036h_cloud_top_height.png
-      060h: fig/internal/IFS_20240828+060h_cloud_top_height.png
+      015h: fig/internal/IFS_20240828+015h_cloud_top_height.png
+      039h: fig/internal/IFS_20240828+039h_cloud_top_height.png
+      063h: fig/internal/IFS_20240828+063h_cloud_top_height.png
       084h: fig/internal/IFS_20240828+084h_cloud_top_height.png
       108h: fig/internal/IFS_20240828+108h_cloud_top_height.png
+      132h: fig/internal/IFS_20240828+132h_cloud_top_height.png
+    iwv_itcz_edges_enfo:
+      015h: fig/internal/IFS_20240828+015h_iwv_itcz_edges_enfo.png
+      039h: fig/internal/IFS_20240828+039h_iwv_itcz_edges_enfo.png
+      063h: fig/internal/IFS_20240828+063h_iwv_itcz_edges_enfo.png
+      084h: fig/internal/IFS_20240828+084h_iwv_itcz_edges_enfo.png
+      108h: fig/internal/IFS_20240828+108h_iwv_itcz_edges_enfo.png
+      132h: fig/internal/IFS_20240828+132h_iwv_itcz_edges_enfo.png
+    precip_enfo:
+      015h: fig/internal/IFS_20240828+015h_precip_enfo.png
+      039h: fig/internal/IFS_20240828+039h_precip_enfo.png
+      063h: fig/internal/IFS_20240828+063h_precip_enfo.png
+      084h: fig/internal/IFS_20240828+084h_precip_enfo.png
+      108h: fig/internal/IFS_20240828+108h_precip_enfo.png
+      132h: fig/internal/IFS_20240828+132h_precip_enfo.png
+    sfc_convergence:
+      015h: fig/internal/IFS_20240828+015h_sfc_convergence.png
+      039h: fig/internal/IFS_20240828+039h_sfc_convergence.png
+      063h: fig/internal/IFS_20240828+063h_sfc_convergence.png
+      084h: fig/internal/IFS_20240828+084h_sfc_convergence.png
+      108h: fig/internal/IFS_20240828+108h_sfc_convergence.png
+      132h: fig/internal/IFS_20240828+132h_sfc_convergence.png

@@ -112,6 +112,9 @@ def generate_internal_figures(
                     f"Can not generate {product} with '{current_time}' "
                     f"and '{lead_hours}'. Please provide it manually or "
                     "debug the code."
+                    # f"Given briefing time: {briefing_time}"
+                    # f"Given Meteor track: {meteor_track}"
+                    # f"Given sattracks_fc_time: {sattracks_fc_time}"
                 )
                 logger(msg, "ERROR")
                 print(error)

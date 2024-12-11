@@ -84,12 +84,12 @@ def cloud_top_height(
                                 sattracks_fc_time, "cloud_top_height", ax)
     _draw_cloud_top_height(cloud_top_height, fig, ax)
     _draw_tcwv_contours_for_previous_forecasts(tcwv_forecasts, ax)
-    plot_sattrack(ax, briefing_time, lead_hours, sattracks_fc_time,
-                  which_orbit="descending")
-    for flight_id in FLIGHTS:
-        flight = get_python_flightdata(flight_id)
-        plot_python_flighttrack(flight, briefing_time, lead_hours, ax,
-                                color="C1", show_waypoints=False)
+    #plot_sattrack(ax, briefing_time, lead_hours, sattracks_fc_time,
+    #              which_orbit="descending")
+    #for flight_id in FLIGHTS:
+    #    flight = get_python_flightdata(flight_id)
+    #    plot_python_flighttrack(flight, briefing_time, lead_hours, ax,
+    #                            color="C1", show_waypoints=False)
     plot_meteor_latest_position_in_ifs_forecast(
         briefing_time, lead_hours, ax, meteor=meteor_track)
     matplotlib.rc_file_defaults()
@@ -160,6 +160,9 @@ if __name__ == "__main__":
     briefing_time1 = pd.Timestamp(2024, 9, 11).tz_localize("UTC")
     current_time1 = pd.Timestamp(2024, 9, 11, 9, 30).tz_localize("UTC")
     sattracks_fc_time1 = pd.Timestamp(2024, 9, 11).tz_localize("UTC")
+    # briefing_time1 = pd.Timestamp(2024, 12, 9).tz_localize("UTC")
+    # current_time1 = pd.Timestamp(2024, 12, 9, 9, 30).tz_localize("UTC")
+    # sattracks_fc_time1 = pd.Timestamp(2024, 12, 9).tz_localize("UTC")
     meteor_track = get_meteor_track(deduplicate_latlon=True)
     fig = cloud_top_height(
         briefing_time1, "156H", current_time1, sattracks_fc_time1,
