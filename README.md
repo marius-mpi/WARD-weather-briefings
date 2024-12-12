@@ -24,6 +24,8 @@ IMPORTANT: If you want to include the latest Meteor position, you have to genera
 
 ## 1 - Start a new weather briefing, generate its automatic figures, and its quarto files.
 
+In order to do this, the environment wblib must be activated and IPFS server must be running.
+
 Use **wbcli.sh** for this. Initialize a new folder with
 
 ```
