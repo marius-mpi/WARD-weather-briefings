@@ -11,6 +11,7 @@ import xarray as xr
 from wblib.figures.briefing_info import ORCESTRA_DOMAIN
 from wblib.figures.hifs import expected_issue_time
 from wblib.figures.hifs import get_valid_time
+from wblib.figures.meteor_pos import get_meteor_track
 
 from orcestra import bco, sal
 
@@ -145,10 +146,18 @@ def _get_coordinates(location: str) -> tuple:
     elif location == "Barbados":
         lat = "13.075418"  # degN
         lon = "-59.493768"  # degE
+    elif location == "Meteor":
+        try: 
+            meteor = get_meteor_track(deduplicate_latlon=True)
+            meteor_pos = meteor.isel(time=-1)
+            lat = meteor_pos["lat"]
+            lon = meteor_pos["lon"]
+        except:
+            raise ValueError("Retrieving latest Meteor location failed")
     else:
         error_str = (
             "Please provide a valid location. Valid locations are "
-            + "currently: 'Sal' or 'Barbados'."
+            + "currently: 'Sal', 'Barbados' and Meteor."
         )
         raise ValueError(error_str)
     return (lat, lon)

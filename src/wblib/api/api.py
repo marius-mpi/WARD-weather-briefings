@@ -11,7 +11,7 @@ from wblib.api.figures import make_briefing_figures
 ARGUMENT_DESCRIPTIONS = {
     "date": "Issue date of the weather briefing [YYYMMDD]",
     "sattracks_fc_date": "Issue date on the satellite track forecast [YYYMMDD]",
-    "location": "Either 'Barbados' or 'Sal'",
+    "location": "Either 'Barbados', 'Sal' or 'Meteor'",
 }
 
 

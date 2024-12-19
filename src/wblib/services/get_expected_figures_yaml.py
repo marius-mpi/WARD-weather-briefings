@@ -9,7 +9,7 @@ from wblib.services._define_figures import EXTERNAL_LEAD_PLOTS
 from wblib.services._define_figures import INTERNAL_PLOTS
 from wblib.services._define_figures import PLOTS_LEADTIMES
 
-ALLOWED_LOCATIONS = ["Barbados", "Sal"]
+ALLOWED_LOCATIONS = ["Barbados", "Sal", "Meteor"]
 
 
 def get_expected_figures(
