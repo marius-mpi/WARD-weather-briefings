@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 import cartopy.crs as ccrs
 
-ORCESTRA_DOMAIN = -50, -20, -15, 20  # lon_min, lon_max, lat_min, lat_max
+ORCESTRA_DOMAIN = -55, -15, -15, 20  # lon_min, lon_max, lat_min, lat_max
 INTERNAL_FIGURE_SIZE = (15, 8)
 INTERNAL_PLOTS = ["iwv_itcz_edges", "sfc_winds", "precip", "cloud_top_height",
                   "iwv_itcz_edges_enfo", "sfc_convergence"]

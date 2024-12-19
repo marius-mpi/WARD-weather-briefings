@@ -15,3 +15,6 @@ MPG_Minerva_mpg-green.png
 
 # specific libraries
 /src/wblib/flights/original
+
+#PLANET credentials
+/.config/orcestra/planet.json
